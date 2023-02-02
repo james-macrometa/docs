@@ -1,13 +1,15 @@
 ---
 sidebar_position: 60
-title: Multiple collections vs single large collection
+title: Data Specific Collections 
 ---
 
 Query performance is linked, in part, to the number of documents in the collections and the indexes used. When a single collection contains a large number of complex documents optimizing for performance becomes difficult. Designing collections around purpose-built documents and indexes for returning specific results makes query writing simpler and improves performance.
 
 In this example, we have a single collection, `Garage`. It contains `Account`, `Cars`, `Orders`, and `Staff` attributes with further nested attributes. This makes query writing and indexing difficult. Here is an example document for the `Garage` collection.
 
-```
+## Example Complex Collection Document
+
+```json
 {
     "_id": "Garage/349351645",
     "_key": "349351645",
@@ -47,9 +49,11 @@ In this example, we have a single collection, `Garage`. It contains `Account`, `
   }
 ```
 
-The next example shows how one might structure documents inside of individual collections. This approach can help in creating indexes on correct attributes in each collection and reduce record scan count.
+The next example shows how one might structure documents inside of individual, data specific, collections. This approach can help in creating indexes on correct attributes in each collection and reduce record scan count.
 
-```
+## Example Simple Collection Documents
+
+```json
 //Account Document
 {
     "_id": "Accounts/349491803",
