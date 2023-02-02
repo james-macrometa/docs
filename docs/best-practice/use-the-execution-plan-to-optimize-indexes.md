@@ -1,5 +1,5 @@
 ---
-sidebar_position: 50
+sidebar_position: 130
 title: Use the Execution Plan to optimize indexes
 ---
 
