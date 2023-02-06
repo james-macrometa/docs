@@ -18,7 +18,7 @@ Instead of multiple nested `FOR` loops, we can store the results of a [subquery]
 
 ## Example of Query with No Subqueries
 
-An example of an unoptimized query with multiple `FOR` loops. Here we can see the `FILTER` conditions are applied after the last `FOR` loop. This is inefficient and possibly difficult to understand.
+Below is an example of an unoptimized query with multiple `FOR` loops. Here we can see the `FILTER` conditions are applied after the last `FOR` loop. This is inefficient and potentially difficult to understand.
 
 ```sql
 FOR customer in Accounts
@@ -45,7 +45,7 @@ RETURN {
 
 ## Example of Query with Subqueries
 
-In this optimized example, we use a subquery to retrieve a projection of a smaller subset of data. This reduces the number of iterations required to return the final results.
+In this optimized example, we use a subquery to retrieve a projection of a smaller subset of data. By assigning variables to hold the results of the subqueries we reduce the number of iterations required to return the final results.
 
 ```sql
 LET customerCars = (
@@ -80,7 +80,7 @@ RETURN {
 ```
 ## Example with FILTER Before FOR Loop
 
-Another approach is to place the `FILTER` before each `FOR` loop. This can also reduce the number of iterations.
+An approach without using subqueries is to place the `FILTER` before each `FOR` loop. This can also reduce the number of iterations.
 
 ```sql
 FOR customer in Accounts
