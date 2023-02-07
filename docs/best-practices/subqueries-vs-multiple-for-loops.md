@@ -78,9 +78,9 @@ RETURN {
   "price": job.price
 }
 ```
-## Example with FILTER Before FOR Loop
+## Example with FILTER for each FOR Loop
 
-An approach without using subqueries is to place the `FILTER` before each `FOR` loop. This can also reduce the number of iterations.
+An approach without using subqueries is to `FILTER` on each collection as the query is built. This way each `FOR` loop reduces the number of records to be scanned in subsequent `FOR` loops. This will reduce the number of iterations.
 
 ```sql
 FOR customer in Accounts
