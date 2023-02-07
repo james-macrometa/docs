@@ -2,7 +2,7 @@
 sidebar_position: 90
 title: SEARCH Array Attributes
 ---
-To [`FILTER`](/docs/queryworkers/c8ql/operations/filter) attributes in an array of values you would commonly use the array comparison operators, `ALL`, `ANY`, or `NOT`, as a prefix in conjunction with the common comparison operator `IN`. However, this is not an optimized approach and will not utilize any indexes. Users can create `SEARCH VIEW` for these queries.
+To [`FILTER`](/docs/queryworkers/c8ql/operations/filter) attributes in an array of values you would commonly use the array comparison operators, `ALL`, `ANY`, or `NOT`, as a prefix in conjunction with the common comparison operator `IN`. However, this is not an optimized approach and will not utilize any indexes. Users can create [`SEARCH VIEW`](/docs/search/views/create-search-views) for these queries.
 
 The optimized approach uses the `SEARCH` feature. An index is created on the attributes defined in the search view. You can read more about `SEARCH` and search views here, [SEARCH](https://macrometa.com/docs/search/search).
 
